@@ -145,3 +145,88 @@ ReactDOM.render(
 	<Game />,
 	document.getElementById('root')
 );
+
+// class LikeButton extends React.Component {
+// 	constructor(props) {
+// 		super(props)
+// 		this.state = {
+// 			liked: false
+// 		}
+// 		this.handleClick = this.handleClick.bind(this)
+// 	}
+// 	handleClick(event) {
+// 		this.setState({ liked: !this.state.liked });
+// 	}
+// 	render() {
+// 		var text = this.state.liked ? 'like' : 'haven\'t liked';
+// 		return (
+// 			<p onClick={this.handleClick}>
+// 				You {text} this. Click to toggle.
+// 			</p>
+// 		);
+// 	}
+// }
+
+// ReactDOM.render(
+// 	<LikeButton />,
+// 	document.getElementById('root')
+// );
+
+// class Input extends React.Component {
+// 	constructor(props) {
+// 		super(props)
+// 		this.state = { value: 'Hello!' }
+// 		this.handleChange = this.handleChange.bind(this)
+// 	}
+// 	handleChange(event) {
+// 		this.setState({ value: event.target.value });
+// 	}
+// 	render() {
+// 		var value = this.state.value;
+// 		return (
+// 			<div>
+// 				<input type="text" value={value} onChange={this.handleChange} />
+// 				<p>{value}</p>
+// 			</div>
+// 		);
+// 	}
+// }
+
+// ReactDOM.render(
+// 	<Input />,
+// 	document.getElementById('root')
+// );
+
+// class UserGist extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       username: '',
+//       lastGistUrl: ''
+//     };
+//   }
+
+//   componentDidMount() {
+//     $.get(this.props.source, function(result) {
+//       var lastGist = result[0];
+//       this.setState({
+//         username: lastGist.owner.login,
+//         lastGistUrl: lastGist.html_url
+//       });
+//     }.bind(this));
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         {this.state.username}'s last gist is
+//         <a href={this.state.lastGistUrl}>here</a>.
+//       </div>
+//     );
+//   }
+// }
+
+// ReactDOM.render(
+//   <UserGist source="https://api.github.com/users/octocat/gists" />,
+//   document.getElementById('root')
+// );
